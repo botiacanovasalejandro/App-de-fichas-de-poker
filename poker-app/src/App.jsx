@@ -7,7 +7,7 @@ import PantallaSala from "./components/PantallaSala.jsx";
 
 export default function App() {
   const [pantalla, setPantalla] = useState("menu");
-  const [datosSala, setDatosSala] = useState(null); // { salaId, nombre }
+  const [datosSala, setDatosSala] = useState(null);
 
   if (pantalla === "cartas") {
     return <PantallaCartas volver={() => setPantalla("menu")} />;
@@ -41,9 +41,32 @@ export default function App() {
 
   return (
     <div className="menu">
-      <Boton imagen="/botonCartas.jpg" onClick={() => setPantalla("cartas")} />
-      <Boton imagen="/botonFichas.jpg" onClick={() => setPantalla("sala")} />
-      <Boton imagen="/botonTodo.jpg" onClick={() => setPantalla("todo")} />
+      <div className="menu-header">
+        <div className="menu-logo">♠ ♥ ♣ ♦</div>
+        <h1 className="menu-titulo">Poker Night</h1>
+        <p className="menu-subtitulo">Gestiona tu partida desde el móvil</p>
+      </div>
+
+      <div className="menu-botones">
+        <Boton
+          icono="🃏"
+          titulo="Cartas"
+          descripcion="Gestiona el mazo y el reparto"
+          onClick={() => setPantalla("cartas")}
+        />
+        <Boton
+          icono="🪙"
+          titulo="Fichas"
+          descripcion="Apuestas y bote en tiempo real"
+          onClick={() => setPantalla("sala")}
+        />
+        <Boton
+          icono="♠"
+          titulo="Partida completa"
+          descripcion="Cartas y fichas juntas"
+          onClick={() => setPantalla("todo")}
+        />
+      </div>
     </div>
   );
 }

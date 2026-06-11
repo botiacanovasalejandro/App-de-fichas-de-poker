@@ -349,3 +349,90 @@ button:disabled { opacity: 0.4; cursor: not-allowed; }
   font-size: 0.85rem;
   color: #95d5b2;
 }
+
+/* ── MENÚ PRINCIPAL ─────────────────────────────────── */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  min-height: 100vh;
+  padding: 32px 16px;
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-logo {
+  font-size: 2rem;
+  letter-spacing: 12px;
+  color: #d4a017;
+}
+
+.menu-titulo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #f0e6d3;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.menu-subtitulo {
+  color: #74c69d;
+  font-size: 0.9rem;
+}
+
+.menu-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.boton-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #1b4332;
+  border: 2px solid #2d6a4f;
+  border-radius: 14px;
+  padding: 18px 20px;
+  width: 100%;
+  text-align: left;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.boton-menu:hover {
+  border-color: #d4a017;
+  transform: translateX(4px);
+}
+
+.boton-icono {
+  font-size: 2rem;
+  min-width: 44px;
+  text-align: center;
+}
+
+.boton-titulo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f0e6d3;
+  display: block;
+}
+
+.boton-descripcion {
+  font-size: 0.8rem;
+  color: #74c69d;
+  display: block;
+  margin-top: 2px;
+}
+
+.boton-menu:hover .boton-titulo {
+  color: #d4a017;
+}
