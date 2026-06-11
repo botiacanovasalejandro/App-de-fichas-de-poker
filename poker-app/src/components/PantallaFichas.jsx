@@ -12,7 +12,7 @@ export default function PantallaFichas({ volver, salaId, nombre }) {
   useEffect(() => {
     if (!salaId || !nombre) return;
 
-    const socket = io("http://localhost:3001");
+    const socket = io(import.meta.env.VITE_SERVER_URL || "http://localhost:3001");
     socketRef.current = socket;
 
     socket.on("connect", () => {
