@@ -43,7 +43,7 @@ export default function App() {
     <div className="menu">
       <div className="menu-header">
         <div className="menu-logo">♠ ♥ ♣ ♦</div>
-        <h1 className="menu-titulo">Poker Night</h1>
+        <h1 className="menu-titulo">PanchiPoker</h1>
         <p className="menu-subtitulo">Gestiona tu partida desde el móvil</p>
       </div>
 

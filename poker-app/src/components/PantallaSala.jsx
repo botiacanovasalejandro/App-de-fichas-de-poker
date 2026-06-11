@@ -57,13 +57,18 @@ export default function PantallaSala({ volver, onEntrar }) {
       )}
 
       {modo === "unirse" && (
-        <input
-          className="input-sala"
-          placeholder="Código de sala"
-          value={codigoInput}
-          onChange={(e) => setCodigoInput(e.target.value.toUpperCase())}
-          maxLength={8}
-        />
+      <input
+        className="input-sala"
+        placeholder="Código de sala"
+        value={codigoInput}
+        onChange={(e) => setCodigoInput(e.target.value)}
+        onBlur={(e) => setCodigoInput(e.target.value.toUpperCase())}
+        maxLength={8}
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="characters"
+        spellCheck="false"
+      />
       )}
 
       <input
